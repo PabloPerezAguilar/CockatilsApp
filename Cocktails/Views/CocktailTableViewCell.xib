@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CocktailTableViewCell" rowHeight="55" id="KGk-i7-Jjw" customClass="CocktailTableViewCell" customModule="Cocktails" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UUf-4C-y7L">
+                        <rect key="frame" x="0.0" y="5" width="50" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="iI6-wT-nYY"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir8-7t-x35">
+                        <rect key="frame" x="274.5" y="6" width="45.5" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45.5" id="DFS-TU-QFG"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="didTapFavButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xD7-ET-584"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-Bg-RPb">
+                        <rect key="frame" x="50" y="0.0" width="214.5" height="44"/>
+                        <color key="backgroundColor" red="0.1529411765" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.1529411765" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="UUf-4C-y7L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="72l-NH-mvU"/>
+                    <constraint firstAttribute="bottom" secondItem="MjR-Bg-RPb" secondAttribute="bottom" id="7lO-Nx-JWL"/>
+                    <constraint firstItem="UUf-4C-y7L" firstAttribute="centerY" secondItem="ir8-7t-x35" secondAttribute="centerY" id="8pT-C3-PGG"/>
+                    <constraint firstItem="MjR-Bg-RPb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LV0-Xv-8Au"/>
+                    <constraint firstItem="ir8-7t-x35" firstAttribute="leading" secondItem="MjR-Bg-RPb" secondAttribute="trailing" constant="10" id="Lbs-lH-c46"/>
+                    <constraint firstAttribute="bottom" secondItem="ir8-7t-x35" secondAttribute="bottom" constant="6" id="a4F-g3-hm7"/>
+                    <constraint firstItem="UUf-4C-y7L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cR2-5A-mB9"/>
+                    <constraint firstItem="UUf-4C-y7L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gO5-iM-YEe"/>
+                    <constraint firstAttribute="trailing" secondItem="ir8-7t-x35" secondAttribute="trailing" id="l7b-ki-AT2"/>
+                    <constraint firstItem="MjR-Bg-RPb" firstAttribute="leading" secondItem="UUf-4C-y7L" secondAttribute="trailing" id="p6P-wh-bJa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cocktailImageView" destination="UUf-4C-y7L" id="YGu-vv-QzO"/>
+                <outlet property="favButton" destination="ir8-7t-x35" id="OK3-SH-xlF"/>
+                <outlet property="nameLabel" destination="MjR-Bg-RPb" id="O3q-RS-zzj"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
